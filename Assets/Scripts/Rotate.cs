@@ -22,7 +22,7 @@ public class Rotate : MonoBehaviour {
 		if(counter < 0){
 			// change direction
 			direction *= -1;
-			counter = Random.Range (2,4);
+			counter = Random.Range (20,30)/10;
 		}
 		transform.Rotate (direction * Vector3.up * Time.deltaTime * speed);
 	}
