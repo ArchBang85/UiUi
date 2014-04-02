@@ -9,10 +9,8 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		//if(playerSpawns == null){
-			playerSpawns = GameObject.FindGameObjectsWithTag("Spawn");
-		//}
-		
+
+		playerSpawns = GameObject.FindGameObjectsWithTag("Spawn");
 
 	}
 	

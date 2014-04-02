@@ -52,6 +52,7 @@
      <Compile Include="Assets\Demo\scripts\SimpleTween.cs" />
      <Compile Include="Assets\Demo\scripts\TweenChainGUI.cs" />
      <Compile Include="Assets\Demo\scripts\TweenFlowGUI.cs" />
+     <Compile Include="Assets\Scripts\CameraZoom.cs" />
      <Compile Include="Assets\Scripts\Fly.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
