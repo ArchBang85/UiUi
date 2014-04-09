@@ -3,11 +3,13 @@ using System.Collections;
 
 public class Fly : MonoBehaviour {
 
+	public GameObject deathBurst; // particle effects at death
 	public float power = 0.3f;
 	private float newDirCounter = 2.0f;
 	private Vector3 direction;
 	private Vector3 orientation;
 	private Vector3 newRotation;
+	private bool alive = true;
 	// Use this for initialization
 	void Start () {
 	
@@ -25,6 +27,10 @@ public class Fly : MonoBehaviour {
 			direction = RandomDirection();
 			dashTo(direction);
 		}
+
+		if (Input.GetKey("#")){
+			die ();
+		}
 	}
 
 	Vector3 RandomDirection(){
@@ -41,5 +47,13 @@ public class Fly : MonoBehaviour {
 		//transform.rotation = Quaternion.Euler(newRotation);
 		//Quaternion newRotation = Quaternion.LookRotation(direction);
 		//this.transform.rotation = Quaternion.Slerp(this.transform.rotation, newRotation, Time.deltaTime * 8);
+	}
+
+	public void die(){
+		if(alive){
+			alive = false;
+			Destroy(this.gameObject, 0.05f);
+			Instantiate(deathBurst, transform.position, Quaternion.identity);
+		}
 	}
 }

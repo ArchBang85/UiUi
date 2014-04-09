@@ -7,6 +7,7 @@ public class Amble : MonoBehaviour {
 	public float minZ = -5.0f;
 	public float maxX = 5.0f;
 	public float maxZ = 5.0f;
+	public int maxPower = 40;
 
 	private float counter = 5.0f;
 
@@ -43,7 +44,7 @@ public class Amble : MonoBehaviour {
 			}
 
 			Vector3 dir = new Vector3(xDir, 0, zDir);
-			float power = Random.Range (1,30) / 10;
+			float power = Random.Range (10,maxPower) / 10;
 			transform.rigidbody.AddForce(dir.normalized * power, ForceMode.Impulse);
 			//Debug.Log ("pushing to " + dir.normalized); 
 			//Debug.Log ("power " + power); 
